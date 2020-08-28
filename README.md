@@ -1,5 +1,7 @@
 # libtorch1.6-yolov3
-A Libtorch implementation of the YOLO v3 object detection algorithm, written with pure C++, modified from [https://github.com/walktree/libtorch-yolov3](https://github.com/walktree/libtorch-yolov3). It's fast, easy to be integrated to your production, and CPU and GPU are both supported. 
+A Libtorch implementation of the YOLO v3 object detection algorithm, written with pure C++, modified from [https://github.com/walktree/libtorch-yolov3](https://github.com/walktree/libtorch-yolov3). 
+
+It can be seen the changes in issue: [https://github.com/walktree/libtorch-yolov3/issues/52#issue-686915754](https://github.com/walktree/libtorch-yolov3/issues/52#issue-686915754) 
 
 I have successfully tested in Win10 using Visual Studio 2017.
 
@@ -8,9 +10,10 @@ I have successfully tested in Win10 using Visual Studio 2017.
 2. CUDA(Optional)
 3. [OpenCV4.4](https://github.com/opencv/opencv/releases/tag/4.4.0) (Sugest using windows pre-build package)
     Add `opencv/x64/vc15/bin` to Windows system PATH
+4. `Git Bash` or `Cmder`
 
 ## To compile
-1. cmake3.15
+1. Cmake3.15
 2. Visual Studio 2017 (VC 15)
 
 
@@ -45,4 +48,4 @@ inference taken : 980 ms
 3 objects found
 Done
 ```
-
+![detection-output](imgs/out-det.jpg)
