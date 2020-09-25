@@ -5,7 +5,7 @@ project(yolo-app)
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-#set(Torch_DIR "E:/MachineLearning/libtorch/share/cmake/Torch")
+set(Torch_DIR "E:/MachineLearning/libtorch/share/cmake/Torch")
 find_package(Torch REQUIRED)
 
 if(NOT Torch_FOUND)
