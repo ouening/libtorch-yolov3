@@ -7,8 +7,11 @@ I have successfully tested in Win10 using Visual Studio 2017.
 
 ## Requirements
 1. [LibTorch v1.6.0](https://pytorch.org/cppdocs/installing.html)
+
+    Add `"${LIBTORCH}/lib"` to system path.
 2. CUDA(Optional)
 3. [OpenCV4.4](https://github.com/opencv/opencv/releases/tag/4.4.0) (Sugest using windows pre-build package)
+    
     Add `opencv/x64/vc15/bin` to Windows system PATH
 4. `Git Bash` or `Cmder`
 
@@ -49,3 +52,5 @@ inference taken : 980 ms
 Done
 ```
 ![detection-output](imgs/out-det.jpg)
+
+If you encounted some errors like `error while loading shared libraries: torch.dll: cannot open shared object file: No such file or directory`, be sure that you have put the `libtorch/lib` in your system path, or you can copy the dependent file to the same directory as `yolo-app.exe` is in.
