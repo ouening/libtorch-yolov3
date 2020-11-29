@@ -19,10 +19,10 @@ I have successfully tested in Win10 using Visual Studio 2017.
 
 ```
 $ mkdir build && cd build
-$ cmake -DCMAKE_PREFIX_PATH="your libtorch root" -DOpenCV_DIR="your opencv root" ..
+$ cmake -G "Visual Studio 15 2017 Win64" -T host=x64 -DCMAKE_PREFIX_PATH="your libtorch root" -DOpenCV_DIR="your opencv root" ..
 $ cmake --build . --config Release -j 3
 ```
-Finally `libtorch1.6-yolov3\build\Release\yolo-app.exe` is generated.
+`your libtorch root` is like `E:\python\pytorch\libtorch` and `your opencv root` is like `"E:\ScientificComputing\opencv\build"`(which has `OpenCVConfig.cmake` file). Finally `libtorch1.6-yolov3\build\Release\yolo-app.exe` is generated.
 
 ## Running the detector
 
