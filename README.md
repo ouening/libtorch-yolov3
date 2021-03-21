@@ -3,7 +3,7 @@ A Libtorch implementation of the YOLO v3 object detection algorithm, written wit
 
 It can be seen the changes in issue: [https://github.com/walktree/libtorch-yolov3/issues/52#issue-686915754](https://github.com/walktree/libtorch-yolov3/issues/52#issue-686915754) 
 
-I have successfully tested in Win10 using Visual Studio 2017.
+I have successfully tested in Win10 using Visual Studio 2017 and Visual Studio 2019.
 
 ## Requirements
 1. [>=LibTorch v1.6.0 (Tested on version 1.6 and 1.8)](https://pytorch.org/cppdocs/installing.html)
