@@ -76,6 +76,7 @@ static inline int split(const string& str, std::vector<int>& ret_, string sep = 
 	{
 		ret_.push_back(std::stoi(tmp[i]));
 	}
+	return 0;
 }
 
 // returns the IoU of two bounding boxes 
