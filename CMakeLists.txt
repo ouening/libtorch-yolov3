@@ -8,7 +8,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 # set(Torch_DIR "E:/MachineLearning/libtorch/share/cmake/Torch")
-set(CMAKE_PREFIX_PATH "E:/Downloads/libtorch")
+# set(CMAKE_PREFIX_PATH "E:/Downloads/libtorch")
 find_package(Torch REQUIRED)
 
 if(NOT Torch_FOUND)
