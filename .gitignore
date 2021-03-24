@@ -40,6 +40,9 @@ data/
 # Tools
 tools/
 
+# VS Code
+.vscode
+
 # Model files
 tutorials/**/*.pt
 models/*.weights
