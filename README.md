@@ -14,7 +14,7 @@ I have successfully tested in Win10 using Visual Studio 2017 and Visual Studio 2
 2. CUDA(Optional)
 3. [OpenCV4.6](https://github.com/opencv/opencv/releases/tag/4.6.0) (Sugest using windows pre-build package)
     
-    Add `opencv/x64/vc15/bin` to Windows system `PATH` **(Support Visual Studio 2019)**
+    Add `opencv/build/x64/vc15/bin` to Windows system `PATH` **(Support Visual Studio 2019)**
 4. `Git Bash` or `Cmder`
 
 ## To compile
@@ -65,7 +65,9 @@ inference taken : 980 ms
 3 objects found
 Done
 ```
-If you encounted some errors like `error while loading shared libraries: torch.dll: cannot open shared object file: No such file or directory`, be sure that you have put the `libtorch/lib` in your system path, or you can copy the dependent file to the same directory as `yolo-app.exe` is in.
+If you encounted some errors like:
+-  `error while loading shared libraries: torch_cpu.dll: cannot open shared object file: No such file or directory`, be sure that you have put the `libtorch/lib` in your system path, or you can copy the dependent file to the same directory as `yolo-app.exe` is in.
+-   `error while loading shared libraries: opencv_world460.dll: cannot open shared object file: No such file or directory`, be sure that you have put the `opencv/build/x64/vc15/bin` in your system path, or you can copy`opencv_world460.dll` to the same directory as `yolo-app.exe` is in.
 
 The output image can be found in `libtorch1.6-yolov3/build/out-det.jpg`
 ![detection-output1](imgs/out-det.jpg)
