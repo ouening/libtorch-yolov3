@@ -8,13 +8,13 @@ I have successfully tested in Win10 using Visual Studio 2017 and Visual Studio 2
 ## Requirements
 1. [>=LibTorch v1.6.0 (Tested on version 1.6 and 1.8)](https://pytorch.org/cppdocs/installing.html)
 
-    Download from `https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip`
+    Download from `https://download.pytorch.org/libtorch/nightly/cpu/libtorch-win-shared-with-deps-latest.zip` （==Make sure that you have the download the windows version)==
 
     Add `"${LIBTORCH}/lib"` to system path.
 2. CUDA(Optional)
-3. [OpenCV4.5](https://github.com/opencv/opencv/releases/tag/4.5.0) (Sugest using windows pre-build package)
+3. [OpenCV4.6](https://github.com/opencv/opencv/releases/tag/4.6.0) (Sugest using windows pre-build package)
     
-    Add `opencv/x64/vc15/bin` to Windows system PATH
+    Add `opencv/x64/vc15/bin` to Windows system `PATH` **(Support Visual Studio 2019)**
 4. `Git Bash` or `Cmder`
 
 ## To compile
@@ -30,6 +30,11 @@ For VS 2019
 ```
 # $ cmake -G "Visual Studio 16 2019" -T host=x64 .. -DCMAKE_PREFIX_PATH="your libtorch root" -DOpenCV_DIR="your opencv root" ..
 ```
+For example:
+```
+$ cmake -G "Visual Studio 16 2019" -T host=x64 .. -DCMAKE_PREFIX_PATH="E:\DeepLearning\libtorch" -DOpenCV_DIR="E:\ScienceComputing\opencv\build" ..
+```
+
 3. Finally compile, be aware that we should use *`Release`* because we have **used the released version of opencv**
 ```
 $ cmake --build . --config Release -j 3
@@ -38,7 +43,7 @@ $ cmake --build . --config Release -j 3
 
 ## Running the detector
 
-The first thing you need to do is to get the weights file for v3:
+The first thing you need to do is to get the weights file for `yolov3`:
 
 ```
 cd models
