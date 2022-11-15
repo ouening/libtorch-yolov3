@@ -56,7 +56,7 @@ Copy all `.dll` file from `libtorch/lib` to `libtorch1.6-yolov3/build`, then ope
 $ cd libtorch1.6-yolov3/build
 $ ./Release/yolo-app.exe ../imgs/person.jpg
 ```
-The result is:
+The output result is:
 ```
 loading weight ...
 weight loaded ...
@@ -65,6 +65,7 @@ inference taken : 980 ms
 3 objects found
 Done
 ```
-![detection-output](imgs/out-det.jpg)
-
+The output image can be found in `libtorch1.6-yolov3/build/out-det.jpg`
+![detection-output1](imgs/out-det.jpg)
+![detection-output2](imgs/out-det-2.jpg)
 If you encounted some errors like `error while loading shared libraries: torch.dll: cannot open shared object file: No such file or directory`, be sure that you have put the `libtorch/lib` in your system path, or you can copy the dependent file to the same directory as `yolo-app.exe` is in.
